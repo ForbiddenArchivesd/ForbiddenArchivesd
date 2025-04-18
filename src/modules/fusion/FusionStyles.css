@@ -1,0 +1,711 @@
+/* FusionLabModule Styles */
+
+/* Main module container */
+.fusion-lab-module {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Module header */
+.module-header {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.module-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 5px var(--color-accent-neon);
+}
+
+.module-header p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+/* Fusion input area with slots */
+.fusion-input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fusion-plus {
+  font-size: 2.5rem;
+  color: var(--color-accent-purple);
+  margin: 0 0.5rem;
+}
+
+/* Individual fusion slot */
+.fusion-slot {
+  width: 280px;
+  height: 240px;
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.fusion-slot:hover {
+  box-shadow: 0 0 15px var(--color-accent-neon);
+}
+
+.slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.slot-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.remove-entity {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.remove-entity:hover {
+  color: var(--color-accent-neon);
+}
+
+/* Entity in fusion slot */
+.fusion-entity {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+}
+
+.entity-portrait {
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--color-accent-purple);
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.portrait-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.entity-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.entity-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.entity-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.entity-stats {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  color: var(--color-text-secondary);
+}
+
+.stat-value {
+  color: var(--color-text-primary);
+}
+
+/* Empty fusion slot */
+.fusion-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--color-accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.empty-text {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.help-text {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Catalyst selector */
+.catalyst-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.catalyst-selector {
+  width: 280px;
+  height: 120px;
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.catalyst-selector:hover {
+  box-shadow: 0 0 15px var(--color-accent-neon);
+}
+
+.catalyst-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.catalyst-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.remove-catalyst {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.remove-catalyst:hover {
+  color: var(--color-accent-neon);
+}
+
+/* Catalyst content when selected */
+.catalyst-content {
+  display: flex;
+  align-items: center;
+  height: 70%;
+}
+
+.catalyst-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--color-accent-purple);
+  margin-right: 1rem;
+}
+
+.catalyst-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalyst-info {
+  flex: 1;
+}
+
+.catalyst-name {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.catalyst-type {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.effect-description {
+  font-size: 0.9rem;
+  color: var(--color-accent-neon);
+}
+
+/* Empty catalyst slot */
+.catalyst-empty {
+  display: flex;
+  align-items: center;
+  height: 70%;
+}
+
+/* Result preview */
+.result-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.result-preview {
+  width: 580px;
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+}
+
+.preview-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-entity {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.preview-icon {
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  border: 2px solid var(--color-accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.preview-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.preview-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.rarity-chances {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.rarity-chances h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.chance-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.chance-label {
+  color: var(--color-text-secondary);
+}
+
+.chance-value {
+  color: var(--color-text-primary);
+}
+
+.catalyst-bonus {
+  color: var(--color-accent-neon);
+  font-size: 0.9em;
+}
+
+.preview-disclaimer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+}
+
+.preview-empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-secondary);
+}
+
+/* Action area with fusion button */
+.action-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.fusion-button-container {
+  width: 580px;
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+  border: 1px solid var(--color-accent-purple);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fusion-cost, .fusion-limit {
+  font-size: 0.9rem;
+}
+
+.cost-label, .limit-label {
+  color: var(--color-text-secondary);
+  margin-right: 0.5rem;
+}
+
+.cost-value, .limit-value {
+  color: var(--color-text-primary);
+}
+
+.cost-value.insufficient {
+  color: var(--color-danger);
+}
+
+.fusion-button {
+  padding: 0.8rem 2rem;
+  background-color: var(--color-accent-purple);
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fusion-button:hover:not(.disabled) {
+  background-color: var(--color-accent-neon);
+  box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+.fusion-button.disabled {
+  background-color: var(--color-ui-medium);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Fusion log */
+.log-area {
+  margin-top: 1rem;
+}
+
+.fusion-log {
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+}
+
+.log-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.log-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-entry {
+  display: flex;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--color-ui-medium);
+}
+
+.entry-time {
+  width: 100px;
+  color: var(--color-accent-neon);
+  font-size: 0.9rem;
+}
+
+.entry-content {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.entry-sources {
+  margin-right: 0.5rem;
+}
+
+.entry-arrow {
+  margin: 0 0.5rem;
+  color: var(--color-accent-purple);
+}
+
+.entry-result {
+  font-weight: bold;
+}
+
+.entry-catalyst {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.no-fusions {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Entity and Catalyst selector modals */
+.entity-selector-overlay,
+.catalyst-selector-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.entity-selector-modal,
+.catalyst-selector-modal {
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+  background-color: var(--color-ui-dark);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-ui-medium);
+  border: 1px solid var(--color-accent-purple);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: var(--color-accent-purple);
+  color: var(--color-text-primary);
+}
+
+.entities-grid,
+.catalysts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.entity-card,
+.catalyst-card {
+  padding: 1rem;
+  background-color: var(--color-ui-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.entity-card:hover,
+.catalyst-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--color-accent-neon);
+}
+
+.entity-card-header,
+.catalyst-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.entity-card-portrait {
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--color-accent-purple);
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.entity-card-portrait img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.entity-card-stats {
+  margin-bottom: 0.5rem;
+}
+
+.catalyst-effect {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.effect-label {
+  color: var(--color-text-secondary);
+}
+
+.effect-value {
+  color: var(--color-accent-neon);
+}
+
+.select-button {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--color-ui-medium);
+  border: 1px solid var(--color-accent-purple);
+  color: var(--color-text-primary);
+  margin-top: 0.5rem;
+}
+
+.no-entities,
+.no-catalysts {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.catalyst-info-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.skip-catalyst {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.skip-button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid var(--color-accent-purple);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.skip-button:hover {
+  background-color: var(--color-ui-medium);
+}
+
+/* Rarity colors */
+.common {
+  color: var(--color-text-primary);
+}
+
+.rare {
+  color: #4682b4; /* Steel blue */
+}
+
+.epic {
+  color: #9370db; /* Medium purple */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fusion-input-area {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fusion-plus {
+    margin: 1rem 0;
+  }
+  
+  .fusion-button-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Catalyst card icon styling */
+.catalyst-card-icon {
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--color-accent-purple);
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.catalyst-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+} 

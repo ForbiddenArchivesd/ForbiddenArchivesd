@@ -1,0 +1,162 @@
+/* Global CSS for Gothic SCP Theme */
+
+/* Importing Gothic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=IM+Fell+English+SC&display=swap');
+
+:root {
+  /* Main color palette */
+  --color-background: #0a0a0a;
+  --color-background-secondary: #121212;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #909090;
+  --color-text-dark: #121212;
+  
+  /* Accent colors */
+  --color-accent-red: #8a0303;
+  --color-accent-purple: #4b0082;
+  --color-accent-neon: #8a2be2;
+  --color-accent-gold: #ffd700;
+  
+  /* UI element colors */
+  --color-ui-dark: #1a1a1a;
+  --color-ui-medium: #2a2a2a;
+  --color-ui-light: #3a3a3a;
+  
+  /* Status colors */
+  --color-success: #00594c;
+  --color-warning: #8a5a00;
+  --color-danger: #8a0303;
+  --color-accent-success: #00bb8c;
+  
+  /* Fonts */
+  --font-primary: 'IM Fell English SC', serif;
+  --font-secondary: 'Cinzel Decorative', cursive;
+  --font-body: 'Arial', sans-serif;
+  
+  /* Sizing */
+  --header-height: 60px;
+  --sidebar-width: 220px;
+  --status-panel-width: 280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+}
+
+/* Stylized scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ui-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ui-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-purple);
+}
+
+/* Button styling */
+button {
+  font-family: var(--font-primary);
+  background-color: var(--color-ui-dark);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-accent-purple);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-ui-medium);
+  box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+/* Gothic visual elements */
+.gothic-frame {
+  border: 1px solid var(--color-accent-purple);
+  box-shadow: 0 0 5px var(--color-accent-neon);
+  background-color: var(--color-ui-dark);
+  padding: 15px;
+  position: relative;
+}
+
+.gothic-frame::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid var(--color-accent-purple);
+  pointer-events: none;
+}
+
+/* Glitch text effect */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: var(--color-text-primary);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--color-accent-red);
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-1 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: -1px 0 var(--color-accent-neon);
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(34px, 550px, 39px, 0); }
+  100% { clip: rect(16px, 550px, 99px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(70px, 550px, 30px, 0); }
+  100% { clip: rect(17px, 550px, 94px, 0); }
+} 

@@ -1,0 +1,169 @@
+/* Navigation component styling with Gothic elements */
+.navigation {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  background-color: var(--color-ui-dark);
+  border-right: 1px solid var(--color-accent-purple);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Navigation title */
+.nav-title {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--color-accent-purple);
+}
+
+.nav-title h2 {
+  font-family: var(--font-secondary);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 5px var(--color-accent-neon);
+}
+
+/* Navigation buttons container */
+.nav-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 10px;
+  overflow-y: auto;
+}
+
+/* Individual navigation button */
+.nav-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  border: 1px solid var(--color-accent-purple);
+  background-color: var(--color-ui-medium);
+  color: var(--color-text-primary);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+  width: 20px;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.button-label {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Button decorations */
+.button-decoration {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-accent-purple);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.left-decoration {
+  top: 5px;
+  left: 5px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.right-decoration {
+  bottom: 5px;
+  right: 5px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Glow effect on hover */
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0) 0%,
+    rgba(138, 43, 226, 0.1) 50%,
+    rgba(138, 43, 226, 0) 100%
+  );
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+/* Navigation button hover state */
+.nav-button:hover,
+.nav-button.hovered {
+  background-color: var(--color-ui-dark);
+  transform: translateX(3px);
+}
+
+.nav-button:hover .button-icon,
+.nav-button.hovered .button-icon,
+.nav-button.active .button-icon {
+  color: var(--color-accent-neon);
+}
+
+.nav-button:hover .left-decoration,
+.nav-button.hovered .left-decoration,
+.nav-button.active .left-decoration {
+  transform: translate(-2px, -2px);
+}
+
+.nav-button:hover .right-decoration,
+.nav-button.hovered .right-decoration,
+.nav-button.active .right-decoration {
+  transform: translate(2px, 2px);
+}
+
+.nav-button:hover .button-glow,
+.nav-button.hovered .button-glow {
+  opacity: 1;
+}
+
+/* Active navigation button */
+.nav-button.active {
+  background-color: var(--color-ui-dark);
+  border-color: var(--color-accent-neon);
+  box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+.nav-button.active .button-label {
+  color: var(--color-accent-neon);
+}
+
+/* Footer of the navigation */
+.nav-footer {
+  padding: 15px 0;
+  text-align: center;
+  border-top: 1px solid var(--color-accent-purple);
+}
+
+.nav-footer span {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 1.5px;
+} 

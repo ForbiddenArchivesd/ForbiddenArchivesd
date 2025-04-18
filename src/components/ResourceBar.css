@@ -1,0 +1,531 @@
+/* ResourceBar component styling */
+.resource-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  width: 100%;
+  padding: 0 20px;
+  background-color: var(--color-ui-dark);
+  border-bottom: 1px solid var(--color-accent-purple);
+  box-shadow: 0 2px 10px rgba(138, 43, 226, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Player section styling */
+.player-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent-purple);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px var(--color-accent-neon);
+  position: relative;
+}
+
+.avatar-container:hover {
+  box-shadow: 0 0 15px var(--color-accent-neon);
+  transform: scale(1.05);
+}
+
+.player-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wallet integration */
+.top-info-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.player-name {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+/* Wallet address display */
+.wallet-address {
+  font-size: 0.9rem;
+  color: var(--color-accent-neon);
+  margin-left: 2px;
+}
+
+/* Custom styling for wallet button */
+.wallet-button-container {
+  margin-left: 6px;
+  position: relative;
+}
+
+.wallet-button {
+  font-size: 0.75rem !important;
+  padding: 0 10px !important;
+  height: 24px !important;
+  border-radius: 12px !important;
+  background-color: var(--color-accent-purple) !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  line-height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.wallet-button:hover {
+  background-color: #9d4edb !important;
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.6) !important;
+}
+
+/* Override default wallet adapter button styles */
+.wallet-adapter-button {
+  height: 24px !important;
+  padding: 0 10px !important;
+  font-family: var(--font-primary) !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: var(--color-accent-purple) !important;
+}
+
+.wallet-adapter-dropdown-list {
+  font-size: 14px !important;
+}
+
+.wallet-adapter-dropdown-list-item {
+  padding: 8px 10px !important;
+  font-size: 14px !important;
+}
+
+/* Wallet help tooltip */
+.wallet-help-tooltip {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 280px;
+  background-color: #22102b;
+  border: 1px solid var(--color-accent-purple);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.warning-icon {
+  color: #f39c12;
+  font-size: 1rem;
+}
+
+.wallet-help-tooltip a {
+  color: var(--color-accent-neon);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.wallet-help-tooltip a:hover {
+  color: #ff66cc;
+}
+
+/* Wallet install link in profile */
+.wallet-install-link {
+  margin-left: 8px;
+  padding: 2px 6px;
+  background-color: rgba(138, 43, 226, 0.2);
+  border-radius: 4px;
+}
+
+.wallet-install-link a {
+  color: var(--color-accent-neon);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.wallet-install-link a:hover {
+  color: #ff66cc;
+  text-decoration: underline;
+}
+
+/* Wallet status in profile popup */
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: rgba(138, 43, 226, 0.2);
+  border-radius: 6px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.wallet-icon {
+  color: var(--color-accent-purple);
+}
+
+.level-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level-text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.exp-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #222;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+  margin: 4px 0;
+}
+
+.exp-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+
+.exp-text {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Resources section styling */
+.resources-section {
+  display: flex;
+  gap: 20px;
+}
+
+.resource {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resource-icon {
+  font-size: 1.2rem;
+}
+
+.resource-icon.gold {
+  color: #ffb703;
+}
+
+.resource-icon.energy {
+  color: #00b4d8;
+}
+
+.resource-icon.research {
+  color: #8a2be2;
+}
+
+.resource-value {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+}
+
+/* Profile popup styling */
+.profile-popup {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 300px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--color-accent-purple);
+}
+
+.popup-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--color-accent-red);
+}
+
+.popup-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent-purple);
+  box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+.popup-content h3 {
+  font-size: 1.5rem;
+  margin: 10px 0 5px;
+}
+
+.popup-content p {
+  margin: 5px 0;
+  color: var(--color-text-secondary);
+}
+
+.popup-exp-bar {
+  width: 100%;
+  height: 15px;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+
+.popup-exp-fill {
+  height: 100%;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  border-radius: 8px;
+  transition: width 0.3s ease-in-out;
+}
+
+.level-progress {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Level up indicator */
+.level-up-indicator {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffcc00;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  animation: pulse 1s infinite alternate;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.level-up-icon {
+  color: #ff6600;
+}
+
+/* Fade in animation for tooltip */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for level up */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resource-bar {
+    padding: 0 10px;
+  }
+  
+  .resources-section {
+    gap: 10px;
+  }
+  
+  .exp-bar-container {
+    width: 70px;
+  }
+  
+  .exp-text {
+    display: none;
+  }
+  
+  .resource-icon {
+    font-size: 1rem;
+  }
+  
+  .resource-value {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add styles for level statistics */
+.level-stats {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.level-stats h4 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+  font-size: 1rem;
+}
+
+.level-history {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.level-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.level-time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Twitter/X social media button styles */
+.social-button-container {
+  position: relative;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.twitter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-bg-darker);
+  color: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.twitter-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(29, 161, 242, 0.6);
+  border-color: #555;
+}
+
+.twitter-icon {
+  font-size: 0.9rem;
+  color: var(--color-accent-neon);
+}
+
+.social-tooltip {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  background-color: #22102b;
+  border: 1px solid var(--color-accent-purple);
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  font-size: 0.8rem;
+  text-align: center;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.social-tooltip:after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--color-accent-purple);
+} 

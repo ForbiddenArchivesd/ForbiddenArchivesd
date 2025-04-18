@@ -1,0 +1,50 @@
+/* Layout component styling */
+.app-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  margin-top: var(--header-height); /* Add margin to account for fixed ResourceBar */
+}
+
+.content-area {
+  flex: 1;
+  background-color: var(--color-background-secondary);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.95),
+    rgba(18, 18, 18, 0.95)
+  );
+  background-size: cover;
+  background-position: center;
+  overflow: auto; /* Changed from hidden to auto to allow scrolling */
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .main-container {
+    flex-direction: column;
+    margin-top: var(--header-height); /* Ensure margin is maintained at smaller screens */
+  }
+  
+  .content-area {
+    order: -1;
+    overflow-y: auto;
+  }
+  
+  .navigation, .status-panel {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+} 

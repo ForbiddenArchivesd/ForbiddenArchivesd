@@ -1,0 +1,24 @@
+/* Page container styles for common page layouts */
+.page-container {
+  padding: 20px;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-container h1 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 10px var(--color-accent-neon);
+  text-align: center;
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+} 

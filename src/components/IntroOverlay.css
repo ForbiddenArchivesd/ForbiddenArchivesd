@@ -1,0 +1,135 @@
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.overlay-content {
+  width: 90%;
+  max-width: 500px;
+}
+
+.overlay-card {
+  background-color: #151617;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 255, 140, 0.15);
+  text-align: center;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.overlay-card h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #00ff8c;
+  text-shadow: 0 0 5px rgba(0, 255, 140, 0.5);
+}
+
+.overlay-card p {
+  margin-bottom: 1.5rem;
+  color: #aaa;
+}
+
+.overlay-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.entry-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.anonymous-button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.anonymous-button:hover:not(:disabled) {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+.connect-button {
+  background: linear-gradient(135deg, #9945FF 0%, #663399 100%);
+  color: white;
+  border: 1px solid #7b3ed5;
+}
+
+.connect-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #b05fff 0%, #7b40b1 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(153, 69, 255, 0.3);
+}
+
+.entry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.connection-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff5555;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.install-link {
+  margin-top: 0.5rem;
+}
+
+.install-link a {
+  color: #9945FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.install-link a:hover {
+  text-decoration: underline;
+}
+
+.overlay-footer {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+} 
